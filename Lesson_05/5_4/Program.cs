@@ -12,15 +12,32 @@ if (Length % 2 == 0) arr_2 = new int[Length / 2];
 else arr_2 = new int[Length / 2 + 1];
 for (int i = 0; i < arr_2.Length; i++)
 {
-    if (arr[i] != arr[Length - i - 1]) arr_2[i] = arr[i] * arr[Length - i - 1];
-    else arr_2[arr_2.Length - 1] = arr[i];
+if (arr[i] != arr[Length - i - 1]) arr_2[i] = arr[i] * arr[Length - i - 1];
+else arr_2[arr_2.Length - 1] = arr[i];
 }
 return arr_2;
 
-void PrintArray(int[] arr){
+// int index = 0;
+// while (A > 0)
+// {
+// A /= 10;
+// index++;
+// }
+// return index;
+}
+Михаил: void PrintArray(int[] arr)
+{
 var str = string.Join(" ", arr);
 Console.Write($"{str} ");
 }
+
+// void PrintArray(int[] arr)
+// {
+// for (int i = 0; i < arr.Length; i++)
+// {
+// System.Console.WriteLine(arr[i]);
+// }
+// }
 
 int[] MassNums(int size, int from, int to)
 {
