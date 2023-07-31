@@ -1,0 +1,15 @@
+﻿// Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом
+
+void Pali(int num){
+    int num_1_2 = num / 1000;
+    int num_5 = num % 10;
+    int num_4 = num / 10 % 10;
+    
+    if (num_1_2 == num_5 * 10 + num_4)
+       Console.WriteLine($"{num} число палидромное");
+    else
+       Console.WriteLine($"{num} число не палидромное");
+}
+Console.WriteLine("Введите пятизначное число");
+int val = int.Parse(Console.ReadLine()!);
+Pali(val);
